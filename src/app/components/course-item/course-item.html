@@ -1,0 +1,10 @@
+
+<div class="card" [style]="{height: '500px'}">
+  <img class="card-img-top" [src]="course?.imageSrc" alt="Card image" [style]="{height: '200px', objectFit: 'cover'}">
+  <div class="card-body">
+    <h4 class="card-title">{{course?.title}}</h4>
+    <p class="card-text">{{course?.description}}</p>
+    <br/>
+  </div>
+  <div class="card-footer text-muted">{{course?.author}}</div>
+</div>

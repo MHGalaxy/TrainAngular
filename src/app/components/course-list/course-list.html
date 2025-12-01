@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-12 mb-5">
+      <app-create-course (course)="handleCreateCourse($event)"></app-create-course>
+    </div>
+  </div>
+  <hr class="my-3"/>
+  @if (courses) {
+    <div class="row">
+      @for (course of courses; track course.id) {
+        <div class="col-md-3 mb-3">
+          <app-course-item [course]="course"></app-course-item>
+        </div>
+      }
+    </div>
+  }
+
+</div>

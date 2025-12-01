@@ -1,0 +1,68 @@
+<div class="container">
+  <form class="p-4 border rounded shadow-sm bg-light">
+
+    <h4 class="mb-3">Create New Course</h4>
+
+    <!-- Title -->
+    <div class="mb-3">
+      <label for="courseTitle" class="form-label fw-bold">Course Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        [(ngModel)]="course.title"
+        placeholder="Enter course title"
+      >
+    </div>
+
+    <!-- Description -->
+    <div class="mb-3">
+      <label for="courseDescription" class="form-label fw-bold">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        name="description"
+        [(ngModel)]="course.description"
+        rows="3"
+        placeholder="Enter course description"
+      ></textarea>
+    </div>
+
+    <!-- Author -->
+    <div class="mb-3">
+      <label for="courseAuthor" class="form-label fw-bold">Author</label>
+      <input
+        type="text"
+        class="form-control"
+        id="author"
+        name="author"
+        [(ngModel)]="course.author"
+        placeholder="Author name"
+      >
+    </div>
+
+    <!-- Image URL -->
+    <div class="mb-3">
+      <label for="courseImage" class="form-label fw-bold">Image URL</label>
+      <input
+        type="text"
+        class="form-control"
+        id="imageSrc"
+        name="imageSrc"
+        [(ngModel)]="course.imageSrc"
+        placeholder="https://example.com/image.jpg"
+      >
+    </div>
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      class="btn btn-primary w-100 mt-3"
+      (click)="createCourse($event)"
+    >
+      Create Course
+    </button>
+
+  </form>
+</div>
