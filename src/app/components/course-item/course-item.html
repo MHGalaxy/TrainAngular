@@ -5,6 +5,15 @@
     <h4 class="card-title">{{course?.title}}</h4>
     <p class="card-text">{{course?.description}}</p>
     <br/>
+    <i class="text-muted">{{course?.author}}</i>
   </div>
-  <div class="card-footer text-muted">{{course?.author}}</div>
+  <div class="card-footer text-muted">
+    <a
+      class="text-decoration-none link-secondary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+      (click)="showDetails(course?.id)"
+      style="cursor:pointer;"
+    >
+      Show more...
+    </a>
+  </div>
 </div>
