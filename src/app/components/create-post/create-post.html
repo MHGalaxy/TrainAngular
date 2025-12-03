@@ -1,0 +1,56 @@
+<div class="container">
+  <form class="p-4 border rounded shadow-sm bg-light">
+
+    <h4 class="mb-3">Create New Post</h4>
+
+    <!-- Title -->
+    <div class="mb-3">
+      <label for="title" class="form-label fw-bold">Course Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        name="title"
+        [(ngModel)]="post.title"
+        placeholder="Enter course title"
+      >
+    </div>
+
+    <!-- Body -->
+    <div class="mb-3">
+      <label for="body" class="form-label fw-bold">Body</label>
+      <textarea
+        class="form-control"
+        id="body"
+        name="body"
+        [(ngModel)]="post.body"
+        rows="3"
+        placeholder="Enter course description"
+      ></textarea>
+    </div>
+
+    <!-- UserId -->
+    <div class="mb-3">
+      <label for="userId" class="form-label fw-bold">Author</label>
+      <input
+        type="number"
+        class="form-control"
+        id="userId"
+        name="userId"
+        [(ngModel)]="post.userId"
+        placeholder="Author name"
+      >
+    </div>
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      class="btn btn-primary w-100 mt-3"
+      (click)="createPost($event)"
+    >
+      Create Course
+    </button>
+
+  </form>
+</div>
+

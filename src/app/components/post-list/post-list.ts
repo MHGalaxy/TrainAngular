@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {PostDto} from '../../dtos/post/post.dto';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-post-list',
-  imports: [],
+  imports: [
+    RouterLink
+  ],
   templateUrl: './post-list.html',
   styleUrl: './post-list.css',
 })
