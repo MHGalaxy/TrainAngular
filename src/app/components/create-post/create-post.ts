@@ -38,7 +38,8 @@ export class CreatePost {
       return;
     }
 
-    this.httpClient.post<PostDto>('https://jsonplaceholder.typicode.com/posts', this.post)
+    this.httpClient
+      .post<PostDto>('https://jsonplaceholder.typicode.com/posts', this.post)
       .subscribe(result => {
         console.log(result);
       });
