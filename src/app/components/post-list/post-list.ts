@@ -18,7 +18,7 @@ export class PostList {
 
   constructor(protected httpClient: HttpClient) {
     httpClient
-      .get<PostDto[]>('https://jsonplaceholder.typicode.co/posts')
+      .get<PostDto[]>('https://jsonplaceholder.typicode.com/posts')
       .pipe(
         catchError(error => {
           console.error('API error:', error);
